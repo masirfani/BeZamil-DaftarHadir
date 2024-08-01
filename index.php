@@ -1,6 +1,6 @@
 <?php session_start() ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,8 +83,9 @@
                 Swal.fire({
                     icon: "<?= $_SESSION['message']['type'] ?>",
                     title: "<?= $_SESSION['message']['text'] ?>",
-                    showConfirmButton: false,
-                    timer: 1500
+                    text: "<?= $_SESSION['message']['deskripsi'] ?? "" ?>",
+                    // showConfirmButton: false,
+                    // timer: 4000
                 });
             </script>
         <?php endif ?>

@@ -22,12 +22,12 @@ $waktu    = date("Y-m-d H:i:s");
 
 $sql = "SELECT * FROM kehadiran WHERE nama = '$nama'";
 $stmt = $conn->query($sql);
-// var_dump($stmt->num_rows);
-// die();
+
+
 if ($stmt->num_rows > 0) {
     $_SESSION['message'] = [
         "type" => "error",
-        "text" => "Sudah mengisi daftar hadir."
+        "text" => "Maaf $nama sudah mengisi daftar hadir"
     ];
     header("location:index.php");
 } else {
@@ -36,12 +36,14 @@ if ($stmt->num_rows > 0) {
     if ($stmt) {
         $_SESSION['message'] = [
             "type" => "success",
-            "text" => "Berhasil mengisi daftar hadir."
+            "text" => "Terima kasih $nama sudah absen di suramadenusra",
+            "deskripsi" => "Silahkan untuk mengambil goodybag e tempat yang tersedia"
         ];
     } else {
         $_SESSION['message'] = [
             "type" => "error",
-            "text" => "Gagal mengisi daftar hadir."
+            "text" => "Gagal mengisi daftar hadir.",
+            "deskripsi" => ""
         ];
     }
 
