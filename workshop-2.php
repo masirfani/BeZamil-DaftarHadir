@@ -22,10 +22,10 @@
                             <img src="assets/img/logo.png" alt="" class="img-fluid w-50">
                         </div>
 
-                        <h3 class="text-center">Daftar Kehadiran<br>Simposium</h3>
+                        <h3 class="text-center">Daftar Kehadiran<br>Workshop 2: Laboratory Management</h3>
                         <hr />
                         <form action="aksi.php" method="POST">
-                            <input type="hidden" name="tipe" value="Simposium">
+                            <input type="hidden" name="tipe" value="Workshop 2: Laboratory Management">
                             <label for="name">Nama Lengkap Tanpa Gelar</label>
                             <select name="nama" id="name" class="form-control form-control-lg"></select>
                             <div class="form-check mt-3">
@@ -82,7 +82,7 @@
                         var cells = row.split(",");
                         if (cells.length > 0) {
                             var nama = cells[6].replace(/"/g, "");
-                            nama = nama.replace("NAMA", "Nama Lengkap Tanpa Gelar");
+                            nama = nama.replace("NAMA", "Masukkan Nama Anda...");
                             nama = nama.replace("dr.", "");
                             nama = nama.replace("Dr.", "");
                             nama = nama.replace("Dr", "");
