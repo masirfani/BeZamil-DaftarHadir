@@ -23,7 +23,16 @@
                         </div>
 
                         <h3 class="text-center">Daftar Kehadiran</h3>
-                        <hr />
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <a href="kehadiran.php" class="btn btn-info btn-sm">Semua</a>
+                                <a href="?tipe=workshop" class="btn btn-info btn-sm">Kehadiran Workshop</a>
+                                <a href="?tipe=simposium" class="btn btn-info btn-sm">Kehadiran Simposium</a>
+                            </div>
+                            <a href="aksi.php?report=semua" class="btn btn-success btn-sm mb-2">Export ke excel</a>
+                        </div>
+                        <hr>
                         <table id="realtimeTable" class="display">
                             <thead>
                                 <tr>
@@ -71,8 +80,13 @@
 
 <script>
     $(document).ready(function() {
+        // Get the URL parameter 'tipe'
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipe      = urlParams.get('tipe');
+
         // Initialize DataTable
         var table = $('#realtimeTable').DataTable({
+            "pageLength": 50,
             "columns": [{
                     "data": "nomor"
                 },
@@ -94,7 +108,10 @@
             ],
             "ajax": {
                 "url": "data-kehadiran.php",
-                "dataSrc": ""
+                "dataSrc": "",
+                "data": function(param) {
+                    param.tipe = tipe;
+                }
             }
         });
 

@@ -47,12 +47,19 @@ if(isset($_POST['nama'])){
 if (isset($_GET['report'])) {
     $tipe = $_GET['report'];
 
-
+    
+    
     $data = [
         ['Nomor', 'Nama', 'Notes', 'Jam', 'Hari'],
     ];
+    
+    if ($tipe == "semua") {
+        $execute = $conn->query("SELECT * FROM kehadiran ORDER BY id DESC");
+    }else{
+        $execute = $conn->query("SELECT * FROM kehadiran WHERE tipe = '$tipe'");
+    }
 
-    $execute = $conn->query("SELECT * FROM kehadiran WHERE tipe = '$tipe'");
+    
     $no = 1;
     while ($see = mysqli_fetch_object($execute)){
         $dateTime = new DateTime($see->waktu);

@@ -9,7 +9,12 @@ if ($conn->connect_error) {
 
 // SQL query to select data
 $date = date("Y-m-d");
-$sql = "SELECT * FROM kehadiran WHERE DATE(waktu) = '$date' ORDER BY id DESC";
+if (empty($_GET['tipe'])) {
+    $sql = "SELECT * FROM kehadiran ORDER BY id DESC";
+}else{
+    $tipe = ($_GET['tipe'] == "simposium") ? "= 'simposium'" : "!= 'simposium'";
+    $sql = "SELECT * FROM kehadiran WHERE tipe $tipe ORDER BY id DESC";
+}
 $result = $conn->query($sql);
 
 $data = [];
