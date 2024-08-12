@@ -9,13 +9,12 @@ if(isset($_POST['nama'])){
     $nama     = htmlspecialchars($_POST['nama']);
     $goodybag = $_POST['goodybag'];
     $notes    = $_POST['notes'];
-    $tipe    = $_POST['tipe'];
+    $tipe     = $_POST['tipe'];
     $waktu    = date("Y-m-d H:i:s");
     
     
-    $sql = "SELECT * FROM kehadiran WHERE nama = '$nama' AND tipe = '$tipe'";
+    $sql = "SELECT * FROM kehadiran WHERE nama = '$nama' AND tipe = '$tipe' AND DATE(waktu) = CURDATE()";
     $stmt = $conn->query($sql);
-    
     
     if ($stmt->num_rows > 0) {
         $_SESSION['message'] = [
@@ -40,7 +39,7 @@ if(isset($_POST['nama'])){
             ];
         }
     
-        header("location:index.php");
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
 }
 

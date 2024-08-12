@@ -7,7 +7,7 @@ if ($conn->connect_error) {
     die(json_encode(['error' => 'Connection failed: ' . $conn->connect_error]));
 }
 
-$sql = "SELECT * FROM kehadiran WHERE tipe = 'simposium' ORDER BY id, waktu DESC";
+$sql = "SELECT * FROM kehadiran WHERE tipe = 'Workshop 1: Hematology' ORDER BY id, waktu DESC";
 $result = $conn->query($sql);
 
 $data = [];

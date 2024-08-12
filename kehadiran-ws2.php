@@ -96,12 +96,12 @@
                 {
                     "data": "jam"
                 },
-                {
+                {   
                     "data": "hari"
                 },
             ],
             "ajax": {
-                "url": "data-kehadiran.php",
+                "url": "data-kehadiran-ws2.php",
                 "dataSrc": "",
                 "data": function(param) {
                     param.tipe = tipe;

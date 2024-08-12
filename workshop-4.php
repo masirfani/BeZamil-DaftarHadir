@@ -63,8 +63,8 @@
             $("#name").select2();
 
             // Ganti dengan ID spreadsheet dan nama sheet Anda
-            var spreadsheetID = "1y5LOgvsThQ1Nxhya8yoTnqqU2caVaAJPL_2AA0MQfzM";
-            var sheetName = "Rekap gabungan"; // Ganti dengan nama sheet Anda
+            var spreadsheetID = "1cxcLkKxNBZaFHwk2q1ic6QJuXOgxbw_7yO7d7-cQh4I";
+            var sheetName = "WS 4 INFECTIOUS"; // Ganti dengan nama sheet Anda
 
             // URL untuk mendapatkan data dari Google Sheets sebagai CSV
             var url = `https://docs.google.com/spreadsheets/d/${spreadsheetID}/gviz/tq?sheet=${sheetName}&tqx=out:csv`;
@@ -81,7 +81,7 @@
                     rows.forEach(function(row, index) {
                         var cells = row.split(",");
                         if (cells.length > 0) {
-                            var nama = cells[6].replace(/"/g, "");
+                            var nama = cells[2].replace(/"/g, "");
                             nama = nama.replace("NAMA", "Masukkan Nama Anda...");
                             nama = nama.replace("dr.", "");
                             nama = nama.replace("Dr.", "");

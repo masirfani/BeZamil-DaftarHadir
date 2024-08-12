@@ -101,7 +101,7 @@
                 },
             ],
             "ajax": {
-                "url": "data-kehadiran.php",
+                "url": "data-kehadiran-ws1.php",
                 "dataSrc": "",
                 "data": function(param) {
                     param.tipe = tipe;
