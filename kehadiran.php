@@ -37,6 +37,7 @@
                                     <th>Notes</th>
                                     <th>Jam</th>
                                     <th>Hari</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -99,6 +100,9 @@
                 {
                     "data": "hari"
                 },
+                {
+                    "data": "aksi"
+                },
             ],
             "ajax": {
                 "url": "data-kehadiran.php",
@@ -115,6 +119,6 @@
         }
 
         // Update table every 5 seconds
-        setInterval(updateTable, 5000);
+         setInterval(updateTable, 5000);
     });
 </script>

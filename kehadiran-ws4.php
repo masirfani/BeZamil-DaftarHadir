@@ -22,7 +22,7 @@
                             <img src="assets/img/logo.png" alt="" class="img-fluid w-50">
                         </div>
 
-                        <h3 class="text-center">Daftar Kehadiran Simposium</h3>
+                        <h3 class="text-center">Daftar Kehadiran <br>Workshop 4: Infectious Disease and Microbiology</h3>
                         <hr>
                         <div class="d-flex justify-content-end">
                             <a href="aksi.php?report=semua" class="btn btn-success btn-sm mb-2">Export ke excel</a>
@@ -37,6 +37,7 @@
                                     <th>Notes</th>
                                     <th>Jam</th>
                                     <th>Hari</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -99,9 +100,12 @@
                 {
                     "data": "hari"
                 },
+                {
+                    "data": "aksi"
+                },
             ],
             "ajax": {
-                "url": "data-kehadiran-ws4.php",
+                "url": "data-kehadiran.php",
                 "dataSrc": "",
                 "data": function(param) {
                     param.tipe = tipe;
@@ -115,6 +119,6 @@
         }
 
         // Update table every 5 seconds
-        setInterval(updateTable, 5000);
+         setInterval(updateTable, 5000);
     });
 </script>

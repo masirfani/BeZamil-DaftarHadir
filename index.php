@@ -30,7 +30,7 @@
                             <select name="nama" id="name" class="form-control form-control-lg"></select>
                             <div class="form-check mt-3">
                                 <input class="form-check-input" type="checkbox" value="sudah" name="goodybag" id="flexCheckChecked" checked />
-                                <label class="form-check-label" for="flexCheckChecked">Sudah terima Goodybag</label>
+                                <label class="form-check-label" for="flexCheckChecked">Sudah terima workshop kit</label>
                             </div>
                             <label class="mt-3">Notes</label>
                             <textarea name="notes" class="form-control" placeholder="Tuliskan permintaan anda..."></textarea>

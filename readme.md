@@ -1,13 +1,24 @@
-http://localhost/project/zamil-daftarhadir/kehadiran.php
-http://localhost/project/zamil-daftarhadir/kehadiran-ws1.php
-http://localhost/project/zamil-daftarhadir/kehadiran-ws2.php
-http://localhost/project/zamil-daftarhadir/kehadiran-ws3.php
-http://localhost/project/zamil-daftarhadir/kehadiran-ws4.php
-http://localhost/project/zamil-daftarhadir/kehadiran-ws5.php
+DATA KEHADIRAN
+https://pdspatklinsurabaya.or.id/kehadiran/kehadiran.php
+https://pdspatklinsurabaya.or.id/kehadiran/kehadiran-ws1.php
+https://pdspatklinsurabaya.or.id/kehadiran/kehadiran-ws2.php
+https://pdspatklinsurabaya.or.id/kehadiran/kehadiran-ws3.php
+https://pdspatklinsurabaya.or.id/kehadiran/kehadiran-ws4.php
+https://pdspatklinsurabaya.or.id/kehadiran/kehadiran-ws5.php
 
-http://localhost/project/zamil-daftarhadir/kehadiran.php
-http://localhost/project/zamil-daftarhadir/workshop-1.php
-http://localhost/project/zamil-daftarhadir/workshop-2.php
-http://localhost/project/zamil-daftarhadir/workshop-3.php
-http://localhost/project/zamil-daftarhadir/workshop-4.php
-http://localhost/project/zamil-daftarhadir/workshop-5.php
+TEMPAT ABSEN
+https://pdspatklinsurabaya.or.id/kehadiran/index.php      => simposium
+https://pdspatklinsurabaya.or.id/kehadiran/workshop-1.php
+https://pdspatklinsurabaya.or.id/kehadiran/workshop-2.php
+https://pdspatklinsurabaya.or.id/kehadiran/workshop-3.php
+https://pdspatklinsurabaya.or.id/kehadiran/workshop-4.php
+https://pdspatklinsurabaya.or.id/kehadiran/workshop-5.php
+    
+NNcL]d00]gH46g
+
+simposium
+Workshop 1: Hematology
+Workshop 2: Laboratory Management
+Workshop 3: Flowcytometry
+Workshop 4: Infectious Disease and Microbiology
+Workshop 5: Blood Bank and Transfusion Medicine

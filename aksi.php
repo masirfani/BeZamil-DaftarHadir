@@ -21,7 +21,6 @@ if(isset($_POST['nama'])){
             "type" => "error",
             "text" => "Maaf $nama sudah mengisi daftar hadir"
         ];
-        header("location:index.php");
     } else {
         $sql = "INSERT INTO kehadiran VALUES(NULL, '$nama','$goodybag','$notes','$waktu','$tipe')";
         $stmt = $conn->query($sql);
@@ -39,8 +38,8 @@ if(isset($_POST['nama'])){
             ];
         }
     
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
 
 if (isset($_GET['report'])) {
@@ -93,4 +92,30 @@ if (isset($_GET['report'])) {
     // Tutup output buffer
     fclose($output);
     exit();
+}
+
+if(isset($_GET['hapus'])){
+
+    // Get the POST data
+    $nama     = htmlspecialchars($_POST['nama']);
+    $id = $_GET['hapus'];
+    
+    
+    $sql = "DELETE FROM kehadiran WHERE id = '$id'";
+    $stmt = $conn->query($sql);
+    
+    if ($stmt->num_rows > 0) {
+        $_SESSION['message'] = [
+            "type" => "success",
+            "text" => "Berhasil menghapus daftar hadir.",
+            "deskripsi" => ""
+        ];
+    } else {
+        $_SESSION['message'] = [
+            "type" => "error",
+            "text" => "Gagal menghapus daftar hadir",
+            "deskripsi" => ""
+        ];
+    }
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
 }

@@ -7,6 +7,7 @@ if ($conn->connect_error) {
     die(json_encode(['error' => 'Connection failed: ' . $conn->connect_error]));
 }
 
+$tipe = $_GET['tipe'];
 $sql = "SELECT * FROM kehadiran WHERE tipe = 'Workshop 1: Hematology' ORDER BY id, waktu DESC";
 $result = $conn->query($sql);
 
@@ -18,8 +19,9 @@ if ($result->num_rows > 0) {
         $dateTime = new DateTime($row['waktu']);
         $data[$no] = $row;
         $data[$no]['nomor'] = $nomor++;
-        $data[$no]['jam'] = $dateTime->format("s:i:H");
+        $data[$no]['jam'] = $dateTime->format("H:i:s");
         $data[$no]['hari'] = $dateTime->format("d-m-Y");
+        $data[$no]['aksi'] = "<a href='aksi.php?hapus=".$row['id']."' class='btn btn-danger btn-sm'>Hapus</a>";
         $no++;
     }
 }
