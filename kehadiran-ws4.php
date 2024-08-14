@@ -25,7 +25,7 @@
                         <h3 class="text-center">Daftar Kehadiran <br>Workshop 4: Infectious Disease and Microbiology</h3>
                         <hr>
                         <div class="d-flex justify-content-end">
-                            <a href="aksi.php?report=semua" class="btn btn-success btn-sm mb-2">Export ke excel</a>
+                            <a href="aksi.php?report=Workshop 4: Infectious Disease and Microbiology" class="btn btn-success btn-sm mb-2">Export ke excel</a>
                         </div>
                         <hr>
                         <table id="realtimeTable" class="display">
@@ -105,7 +105,7 @@
                 },
             ],
             "ajax": {
-                "url": "data-kehadiran.php",
+                "url": "data-kehadiran-ws4.php",
                 "dataSrc": "",
                 "data": function(param) {
                     param.tipe = tipe;

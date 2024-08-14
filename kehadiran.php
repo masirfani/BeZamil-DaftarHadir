@@ -25,7 +25,7 @@
                         <h3 class="text-center">Daftar Kehadiran Simposium</h3>
                         <hr>
                         <div class="d-flex justify-content-end">
-                            <a href="aksi.php?report=semua" class="btn btn-success btn-sm mb-2">Export ke excel</a>
+                            <a href="aksi.php?report=Simposium" class="btn btn-success btn-sm mb-2">Export ke excel</a>
                         </div>
                         <hr>
                         <table id="realtimeTable" class="display">
